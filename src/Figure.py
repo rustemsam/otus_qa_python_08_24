@@ -20,7 +20,7 @@ class Figure(ABC):
         """
         pass
 
-    def add_area(self, figure):
+    def add_area(self, figure: "Figure") -> float:
         """
         Adds the area of another figure to the current figure's area.
 

@@ -1,6 +1,6 @@
 import math
 
-from src.Figure import Figure
+from Figure import Figure
 
 
 class Circle(Figure):
