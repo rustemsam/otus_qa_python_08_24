@@ -20,8 +20,7 @@ class Figure(ABC):
         """
         pass
 
-    @staticmethod
-    def add_area(figure):
+    def add_area(self, figure):
         """
         Adds the area of another figure to the current figure's area.
 
@@ -31,3 +30,4 @@ class Figure(ABC):
         """
         if not isinstance(figure, Figure):
             raise ValueError(f"This argument {figure} should be part of Figure")
+        return self.area + figure.area
