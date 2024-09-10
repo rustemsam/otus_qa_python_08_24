@@ -1,6 +1,6 @@
 import math
 
-from Figure import Figure
+from src.Figure import Figure
 
 
 class Circle(Figure):
@@ -11,7 +11,7 @@ class Circle(Figure):
     :raises ValueError: If the radius is not positive.
     """
 
-    def __init__(self, radius: int):
+    def __init__(self, radius: float):
         if radius <= 0:
             raise ValueError("The radius of the circle must be positive.")
         self.radius = radius
