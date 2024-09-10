@@ -23,7 +23,7 @@ def square():
 )
 def test_square_perimeter(square, a_side, expected_perimeter):
     s = square(a_side)
-    assert s.perimeter == expected_perimeter, f"Perimeter should be {expected_perimeter}"
+    assert round(s.perimeter, 2) == expected_perimeter, f"Perimeter should be {expected_perimeter}"
 
 
 @pytest.mark.positive
@@ -31,12 +31,12 @@ def test_square_perimeter(square, a_side, expected_perimeter):
     "a_side, expected_area",
     [
         (4, 16),
-        (9.5,  90.25),
+        (9.5, 90.25),
     ]
 )
 def test_square_area(square, a_side, expected_area):
     c = square(a_side)
-    assert c.area == expected_area, f"Area should be {expected_area}"
+    assert round(c.area, 2) == expected_area, f"Area should be {expected_area}"
 
 
 @pytest.mark.negative

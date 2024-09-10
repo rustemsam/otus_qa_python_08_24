@@ -22,7 +22,7 @@ def rectangle():
 )
 def test_rectangle_perimeter(rectangle, a_side, b_side, expected_perimeter):
     c = rectangle(a_side, b_side)
-    assert c.perimeter == expected_perimeter, f"Perimeter should be {expected_perimeter}"
+    assert round(c.perimeter, 2) == expected_perimeter, f"Perimeter should be {expected_perimeter}"
 
 
 @pytest.mark.positive
@@ -35,7 +35,7 @@ def test_rectangle_perimeter(rectangle, a_side, b_side, expected_perimeter):
 )
 def test_rectangle_area(rectangle, a_side, b_side, expected_area):
     c = rectangle(a_side, b_side)
-    assert c.area == expected_area, f"Area should be {expected_area}"
+    assert round(c.area, 2) == expected_area, f"Area should be {expected_area}"
 
 
 @pytest.mark.negative

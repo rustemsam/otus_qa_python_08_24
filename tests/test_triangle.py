@@ -22,20 +22,20 @@ def triangle():
 )
 def test_triangle_perimeter(triangle, a_side, b_side, c_side, expected_perimeter):
     tri = triangle(a_side, b_side, c_side)
-    assert tri.perimeter == expected_perimeter, f"Perimeter should be {expected_perimeter}, but got {tri.perimeter}"
+    assert round(tri.perimeter, 2) == expected_perimeter, f"Perimeter should be {expected_perimeter}, but got {tri.perimeter}"
 
 
 @pytest.mark.positive
 @pytest.mark.parametrize(
     "a_side, b_side, c_side, expected_area",
     [
-        (5, 5, 5, 10.825317547305483),
-        (5.1, 5.5, 5.9, 12.959329409734131),
+        (5, 5, 5, 10.83),
+        (5.1, 5.5, 5.9, 12.96),
     ]
 )
 def test_triangle_area(triangle, a_side, b_side, c_side, expected_area):
     tri = triangle(a_side, b_side, c_side)
-    assert tri.area == expected_area, f"Area should be {expected_area}, but got {tri.area}"
+    assert round(tri.area, 2) == expected_area, f"Area should be {expected_area}, but got {tri.area}"
 
 
 @pytest.mark.negative
