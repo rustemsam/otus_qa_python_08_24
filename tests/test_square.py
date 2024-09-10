@@ -1,7 +1,7 @@
 import pytest
 
-from src.Rectangle import Rectangle
-from src.Square import Square
+from src.rectangle import Rectangle
+from src.square import Square
 
 
 @pytest.fixture

@@ -1,6 +1,6 @@
 import pytest
 
-from src.Rectangle import Rectangle
+from src.rectangle import Rectangle
 
 
 @pytest.fixture

@@ -1,6 +1,6 @@
 import pytest
 
-from src.Circle import Circle
+from src.circle import Circle
 
 
 @pytest.fixture

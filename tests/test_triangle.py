@@ -1,6 +1,6 @@
 import pytest
 
-from src.Triangle import Triangle
+from src.triangle import Triangle
 
 
 @pytest.fixture
