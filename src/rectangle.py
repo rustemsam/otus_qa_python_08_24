@@ -1,4 +1,4 @@
-from Figure import Figure
+from src.figure import Figure
 
 
 class Rectangle(Figure):
@@ -10,9 +10,9 @@ class Rectangle(Figure):
     :raises ValueError: If either side length is not positive.
     """
 
-    def __init__(self, a_side: int, b_side: int):
+    def __init__(self, a_side: float, b_side: float):
         if a_side <= 0 or b_side <= 0:
-            raise ValueError("The side for the side of rectangle should be positive")
+            raise ValueError("The side for the side of rectangle should be positive.")
         self.a_side = a_side
         self.b_side = b_side
 

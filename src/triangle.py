@@ -1,10 +1,10 @@
 import math
 
-from Figure import Figure
+from src.figure import Figure
 
 
 class Triangle(Figure):
-    def __init__(self, a_side: int, b_side: int, c_side: int):
+    def __init__(self, a_side: float, b_side: float, c_side: float):
         """
         Initializes a Triangle with the given side lengths.
 
@@ -22,7 +22,7 @@ class Triangle(Figure):
         self.c_side = c_side
 
     @staticmethod
-    def _is_valid_triangle(a: int, b: int, c: int) -> bool:
+    def _is_valid_triangle(a: float, b: float, c: float) -> bool:
         """
         Checks if the given sides form a valid triangle.
 

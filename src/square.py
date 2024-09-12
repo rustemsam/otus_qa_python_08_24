@@ -1,4 +1,4 @@
-from Rectangle import Rectangle
+from src.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -9,7 +9,7 @@ class Square(Rectangle):
     :raises ValueError: If the side length is not positive.
     """
 
-    def __init__(self, a_side: int):
+    def __init__(self, a_side: float):
         if a_side <= 0:
-            raise ValueError("The side for the side of square should be positive")
+            raise ValueError("The side for the side of square should be positive.")
         super().__init__(a_side, a_side)
