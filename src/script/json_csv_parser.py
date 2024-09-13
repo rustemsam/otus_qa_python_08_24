@@ -54,6 +54,3 @@ def parse_json_csv(csv_file: str, json_file: str):
 
     with open("result.json", "a") as f:
         json.dump(result_list, f, indent=4)
-
-
-print(parse_json_csv("books.csv", "users.json"))
