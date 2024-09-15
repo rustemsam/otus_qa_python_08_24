@@ -9,7 +9,7 @@ def get_path(filename: str) -> str:
     return os.path.join(FILES_DIR, filename)
 
 
-def parse_json_csv(csv_file: str, json_file: str):
+def read_books_from_csv(csv_file: str) -> list:
     with open(get_path(csv_file), newline="") as f:
         csv_reader = csv.reader(f)
         header = next(csv_reader)
@@ -24,11 +24,17 @@ def parse_json_csv(csv_file: str, json_file: str):
                 "genre": row_dict.get("Genre", "Unknown"),
             }
             books.append(book)
+    return books
 
-    result_list = []
 
+def read_users_from_json(json_file: str) -> list:
     with open(get_path(json_file), "r") as f:
         users = json.load(f)
+    return users
+
+
+def distribute_books_among_users(users: list, books: list) -> list:
+    result_list = []
 
     num_users = len(users)
     num_books = len(books)
@@ -52,5 +58,24 @@ def parse_json_csv(csv_file: str, json_file: str):
         start_index = end_index
         result_list.append(result)
 
-    with open("result.json", "a") as f:
+    return result_list
+
+
+def write_result_to_json(result_list: list, output_file: str):
+    with open(output_file, "a") as f:
         json.dump(result_list, f, indent=4)
+
+
+def parse_json_csv(csv_file: str, json_file: str, output_file: str = "result.json"):
+    books = read_books_from_csv(csv_file)
+    users = read_users_from_json(json_file)
+
+    result_list = distribute_books_among_users(users, books)
+    write_result_to_json(result_list, output_file)
+
+
+if __name__ == "__main__":
+    csv_file = "books.csv"
+    json_file = "users.json"
+    output_file = "result.json"
+parse_json_csv(csv_file, json_file, output_file)
