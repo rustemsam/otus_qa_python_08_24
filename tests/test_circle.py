@@ -18,11 +18,13 @@ def circle():
     [
         (5, 31.42),
         (5.5, 34.56),
-    ]
+    ],
 )
 def test_circle_perimeter(circle, radius, expected_perimeter):
     c = circle(radius)
-    assert round(c.perimeter, 2) == expected_perimeter, f"Perimeter should be {expected_perimeter}"
+    assert (
+        round(c.perimeter, 2) == expected_perimeter
+    ), f"Perimeter should be {expected_perimeter}"
 
 
 @pytest.mark.positive
@@ -31,7 +33,7 @@ def test_circle_perimeter(circle, radius, expected_perimeter):
     [
         (5, 78.54),
         (5.5, 95.03),
-    ]
+    ],
 )
 def test_circle_area(circle, radius, expected_area):
     c = circle(radius)
@@ -44,7 +46,7 @@ def test_circle_area(circle, radius, expected_area):
     [
         0,
         -1,
-    ]
+    ],
 )
 def test_circle_invalid_radius(circle, radius):
     with pytest.raises(ValueError, match="The radius of the circle must be positive."):

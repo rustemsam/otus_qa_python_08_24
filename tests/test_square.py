@@ -1,6 +1,5 @@
 import pytest
 
-from src.rectangle import Rectangle
 from src.square import Square
 
 
@@ -19,11 +18,13 @@ def square():
     [
         (10, 40),
         (1.1, 4.4),
-    ]
+    ],
 )
 def test_square_perimeter(square, a_side, expected_perimeter):
     s = square(a_side)
-    assert round(s.perimeter, 2) == expected_perimeter, f"Perimeter should be {expected_perimeter}"
+    assert (
+        round(s.perimeter, 2) == expected_perimeter
+    ), f"Perimeter should be {expected_perimeter}"
 
 
 @pytest.mark.positive
@@ -32,7 +33,7 @@ def test_square_perimeter(square, a_side, expected_perimeter):
     [
         (4, 16),
         (9.5, 90.25),
-    ]
+    ],
 )
 def test_square_area(square, a_side, expected_area):
     c = square(a_side)
@@ -40,13 +41,9 @@ def test_square_area(square, a_side, expected_area):
 
 
 @pytest.mark.negative
-@pytest.mark.parametrize(
-    "a_side",
-    [
-        0,
-        -1
-    ]
-)
+@pytest.mark.parametrize("a_side", [0, -1])
 def test_square_invalid_side(square, a_side):
-    with pytest.raises(ValueError, match="The side for the side of square should be positive."):
+    with pytest.raises(
+        ValueError, match="The side for the side of square should be positive."
+    ):
         square(a_side)
