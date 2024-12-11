@@ -81,7 +81,6 @@ class Process:
         return f"Process(user={self.user}, pid={self.pid}, cpu={self.cpu}, mem={self.mem}, command={self.command})"
 
 
-# Standalone functions
 def generate_report() -> List[str]:
     """Generate report text as a list of strings."""
     processes = Process.from_ps_aux()
@@ -137,7 +136,6 @@ def print_results():
     print(f"Отчёт сохранён в файл: {filename}")
 
 
-# Main execution
 if __name__ == "__main__":
     run_script()
     print_results()
