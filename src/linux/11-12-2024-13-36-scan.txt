@@ -1,0 +1,43 @@
+Отчёт о состоянии системы:
+Пользователи системы: _accessoryupdater, _analyticsd, _appinstalld, _appleevents, _applepay, _audiomxd, _biome, _cmiodalassistants, _coreaudiod, _ctkd, _distnote, _driverkit, _fpsd, _gamecontrollerd, _iconservices, _locationd, _mdnsresponder, _modelmanagerd, _nearbyd, _netbios, _networkd, _neuralengine, _nsurlsessiond, _oahd, _rmd, _softwareupdate, _spotlight, _timed, _trustd, _usbmuxd, _windowserver, root, rustemsamigullin
+Процессов запущено: 504
+
+
+Пользовательских процессов:
+rustemsamigullin: 311
+_windowserver  : 2
+_coreaudiod    : 3
+root           : 135
+_analyticsd    : 1
+_driverkit     : 5
+_cmiodalassistants: 9
+_locationd     : 7
+_gamecontrollerd: 2
+_softwareupdate: 2
+_netbios       : 1
+_iconservices  : 1
+_neuralengine  : 2
+_audiomxd      : 1
+_fpsd          : 2
+_trustd        : 1
+_rmd           : 1
+_modelmanagerd : 1
+_appleevents   : 2
+_nearbyd       : 1
+_appinstalld   : 1
+_nsurlsessiond : 2
+_ctkd          : 1
+_oahd          : 1
+_applepay      : 1
+_spotlight     : 1
+_accessoryupdater: 1
+_biome         : 1
+_networkd      : 1
+_mdnsresponder : 1
+_distnote      : 1
+_usbmuxd       : 1
+_timed         : 1
+Всего памяти используется: 72.50 %
+Всего CPU используется: 109.80 %
+Больше всего памяти использует: /Applications/PyChar (14.70%)
+Больше всего CPU использует: /Applications/PyChar (47.30%)
