@@ -19,7 +19,7 @@ class Process:
         self.command = processor[10]
 
     @classmethod
-    def from_ps_aux(cls) -> List['Process']:
+    def run_ps_aux_process(cls) -> List['Process']:
         """Fetch and parse processes using 'ps aux'."""
         try:
             process = subprocess.Popen(['ps', 'aux'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
