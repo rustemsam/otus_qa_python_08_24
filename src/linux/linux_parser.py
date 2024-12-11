@@ -107,7 +107,7 @@ def generate_report() -> List[str]:
 
 def run_script():
     """Print system status report."""
-    processes = Process.from_ps_aux()
+    processes = Process.run_ps_aux_process()
 
     print("Отчёт о состоянии системы:")
     print(f"Пользователи системы: {', '.join(Process.users(processes))}")
