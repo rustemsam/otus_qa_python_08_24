@@ -83,7 +83,7 @@ class Process:
 
 def generate_report() -> List[str]:
     """Generate report text as a list of strings."""
-    processes = Process.from_ps_aux()
+    processes = Process.run_ps_aux_process()
 
     report = []
     report.append("Отчёт о состоянии системы:")
